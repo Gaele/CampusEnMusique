@@ -1,0 +1,5 @@
+AuthName "Page d'administration protegee"
+AuthType Basic
+AuthUserFile "/home/campusenmusiqueorsay/www/Blog/BlogAdmin/.htpasswd"
+Require valid-user
+

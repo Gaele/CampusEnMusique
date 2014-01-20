@@ -1,0 +1,632 @@
+/*
+ * 
+ * @autor: Vincent VANHECKE
+ * 
+ */
+
+body {
+	background-color: white;
+	/* width: 1060px;*/
+	font-family: 'MonotypeCorsiva', Times New Roman, sans-serif;
+}
+
+/* le contenu de body */
+#block_page {
+	text-align: center;
+}
+
+img {
+	max-width: 90%;
+}
+
+#banniere {
+	background-image: url(Images/banniere-1_tailleDiv2.jpg);
+	background-repeat: no-repeat;
+	border-image-source : url(Images/banniere_bonus2.jpg);
+	width: 1024px;
+	/* width: 100%; */
+	height: 140px;
+	padding: 0;
+	margin: 0 auto;
+}
+
+/* Menu Principal */
+#menu_principal {
+	padding-top: 110px;
+	width: 1020px;
+	overflow: visible;
+}
+#menu_principal_gauche {
+	padding-right: 120px;
+}
+#menu_principal_droit {
+	padding-left: 120px;
+}
+#menu_principal_gauche, #menu_principal_droit {
+	display: inline-block;
+}
+#mp_1, #mp_2, #mp_3, #mp_4, #mp_5, #mp_6 {
+	position: relative;
+	display: inline-block;
+	padding-left: 0%;
+	overflow: visible;
+	padding-left: 30px;
+}
+
+#mp_2, #mp_3 {/* Le diese et la clef de fa sont assez volumineux. On leur donne plus de place.*/
+	margin-left: 10px;
+}
+
+.clef_sol, .diese, .clef_fa, .clef_ut, .bemol, .TAB {
+	display: inline-block;
+	position:absolute;
+	background-repeat: no-repeat;
+	background-position: center left;
+}
+
+.clef_sol {
+	top: -10px;
+	left: 0px;
+	background-image: url("Images/Menus/clef_sol.png");
+	width: 24px;
+	height: 72px;
+}
+
+.diese {
+	top: -5px;
+	left: 5px;
+	background-image: url("Images/Menus/diese.png");
+	width: 24px;
+	height: 56px;
+}
+
+.clef_fa {
+	top: 4px;
+	left: -8px;
+	background-image: url("Images/Menus/clef_fa.png");
+	width: 40px;
+	height: 40px;
+}
+
+.clef_ut {
+	top: -5px;
+	left: 0px;
+	background-image: url("Images/Menus/clef_ut.png");
+	width: 32px;
+	height: 48px;
+}
+
+.bemol {
+	top: -5px;
+	left: 5px;
+	background-image: url("Images/Menus/Bemol.png");
+	width: 24px;
+	height: 40px;
+}
+
+.TAB {
+	top: -10px;
+	left: 5px;
+	background-image: url("Images/Menus/TAB.png");
+	width: 24px;
+	height: 58px;	
+}
+
+/* le contenu de body prive de sa banniere, son titre et son pied de page */
+#corpsDeLaPage {
+	overflow: hidden;
+}
+
+
+header {
+	padding-top: 20px;
+}
+
+nav ul {
+	padding-right: 0;
+	padding-left: 0;
+}
+ul {
+	list-style-type: none;
+}
+nav li {
+	padding-top: 10px;
+	line-height: 90%;
+}
+
+#dragon_gauche {
+	width: 192px;
+	height: 56px;
+	padding: 0;
+	background-image: url(Images/Menus/Dragon_Gauche.png);
+	background-repeat: no-repeat;
+}
+
+#dragon_droit {
+	width: 192px;
+	height: 56px;
+	padding: 0;
+	background-image: url(Images/Menus/Dragon_Droit.png);
+	background-repeat: no-repeat;
+	background-position: top right;
+	
+	position: relative;
+	/* left: -42px; */
+	left:-30%;
+}
+
+
+/* Alignement Menu*/
+#menu_gauche {
+	text-align: left;
+}
+#menu_droit {
+	text-align: right;
+}
+
+/* Taille Menu */
+#menu_gauche, #menu_droit {
+	/* width: 150px; */
+	width: 15%;
+}
+
+/* la fonction de recherche */
+#menu_gauche input {
+	margin-left: 25px;
+}
+#menu_droit input {
+	margin-right: 25px;
+}
+nav input {
+	width: 100px;
+	box-shadow: 3px 3px 3px black;
+	border-radius: 1px;
+	border-color: rgb(75, 88, 167);
+}
+
+#menu_gauche h3 {
+	margin-left: 40px;
+}
+#menu_droit h3 {
+	margin-right: 40px;
+}
+nav h3 {
+	padding-top: 15px;
+}
+#menu_gauche ul {
+	padding-left: 20px;
+}
+#menu_droit ul {
+	padding-right: 20px;
+}
+
+#menu_gauche .menu_clair {
+	background-image: url(Images/Menus/SousMenu_Clair.png);
+	background-repeat: repeat-y;
+	height: 100%;
+	/* max-height:50px; */
+}
+
+#menu_gauche .menu_fonce {
+	background-image: url(Images/Menus/SousMenu_Fonce.png);
+	background-repeat: repeat-y;
+	height: 100%;
+}
+
+#menu_droit .menu_clair {
+	background-image: url(Images/Menus/SousMenu_Clair_Symetrie.png);
+	background-repeat: repeat-y;
+	background-position: top right; /* Le fond sera placé en haut à droite */
+	height: 100%;
+	/* max-height:50px; */
+}
+
+#menu_droit .menu_fonce {
+	background-image: url(Images/Menus/SousMenu_Fonce_Symetrie.png);
+	background-repeat: repeat-y;
+	background-position: top right; /* Le fond sera placé en haut à droite */
+	height: 100%;
+}
+
+#recherche {
+	height: 800px;
+	padding-bottom: 20px;
+}
+
+#motif_central, #section_gauche, #section_droite, #menu_droit, #menu_gauche, #panneau_central {
+	display: inline-block;
+	vertical-align: top;
+	font-size:1.1em;
+}
+
+/*************************** Corps De La Page ********************************/
+
+article {
+	border: 1px solid rgb(108, 198, 209);
+	border-radius: 5px;
+	margin-bottom: 20px;
+	box-shadow: 4px 4px 4px rgb(92, 103, 175);
+	overflow: auto;
+	background: rgba(210,210,230,0.25);
+
+	
+}
+
+article img {
+	border: 1px solid black;
+	/* max-width: 312px; */
+	max-width: 95%;
+}
+
+article {
+	padding-left:10px;
+	padding-right:10px;
+}
+
+#section_gauche, #section_droite {
+	/* width: 340px; */
+	width: 32%;
+}
+ section h1 , #panneau_central h1{
+	text-transform: uppercase;
+	font-size: 1.5em;
+	color: rgb(214, 5, 202);
+	font-family: CharlemagneStd-Bold, Arial Black, sans-serif;
+ }
+
+/**************** Motif Central ********************/
+#motif_gauche{
+    height: 150px;
+	position:relative;
+}
+#motif_superieur_gauche {
+	background-image: url(Images/Menus/Motif_gauche.jpg);
+	background-repeat: no-repeat;
+	width: 150px;
+	height: 182px;
+	padding: 0;
+	float: left;
+	left: 10px;
+	position: relative;
+}
+
+#motif_droit {
+    height: 150px;
+	position:relative;
+}
+#motif_superieur_droit {
+	background-image: url(Images/Menus/Motif_droit.jpg);
+	background-repeat: no-repeat;
+	width: 150px;
+	height: 182px;
+	padding: 0;
+	float: right;
+	right: 10px;
+	position: relative;
+	top:82px;
+}
+
+#motif_central {
+    height:200px;
+	position: relative;
+}
+
+#motif_supperieur {
+	background-image: url(Images/Menus/OrnementCentral.png);
+	background-repeat: no-repeat;
+	width: 40px;
+	height: 200px;
+	padding: 0;
+}
+
+#ligne_verticale {
+	background-image: url(Images/Menus/ligneVerticale.png);
+	margin: 0 auto;
+	width: 4px;
+	height: 10000%;
+	background-repeat: repeat-y;
+	left: 18px;
+	top: 160px;
+	position:absolute;
+}
+
+#motif_inferieur {
+	background-image: url(Images/Menus/DessinPiedDePage.png);
+	margin: 0 auto;
+	background-repeat: no-repeat;
+	width: 645px;
+	height: 48px;
+	padding: 0;
+}
+
+/************** Footer **************/
+footer {
+	text-align: center;
+	margin-top: 20px;
+}
+footer p {
+	font-size: 1.1em;
+}
+footer em {
+	font-size: 0.8em;
+}
+
+/********************** Le panneau central utilise par toutes les pages sauf la page principale ************************/
+#panneau_central {
+	width: 69%;
+	/*overflow: auto;*/
+	overflow: visible;
+}
+
+.centrer {
+	text-align: center;
+}
+
+.audio-image {
+	border: 1px solid rgb(75, 88, 167);
+	border-radius: 6px;
+	max-width: 300px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.audio-image figcaption, .audio-image img, .audio-image audio {
+	display: block;
+	margin: 0 auto;
+}
+.audio-image figcaption {
+	text-align: center;
+}
+.audio-image img {
+	max-width: 300px;
+}
+
+
+/**************************************** FORUMS *****************************/
+.billet {
+	/* border: 1px solid rgb(75, 88, 167);
+	margin-bottom: 8px;
+	background-color: rgb(189, 219, 242);
+	*/
+	
+	text-align: center;
+	width: 99%;
+	border: 1px solid rgb(108, 198, 209);
+	border-radius: 5px;
+	margin-bottom: 20px;
+	box-shadow: 4px 4px 4px rgb(92, 103, 175);
+	background-color: rgb(205, 227, 242);
+	overflow: auto;
+}
+
+.billet .titre { /* les titres des billets */
+	color: black;
+	font-size: 2em;
+	padding: 0;
+	
+	/* text-align: center; */
+}
+
+.billet .auteur { /* Les auteurs des billets */
+	color: rgb(75, 88, 167);
+	display: inline-block;
+	font-style: italic;
+	/* font-size: 1.1em; */
+}
+
+.billet .date {
+	font-size: 0.8em;
+	display: inline-block;
+	margin-left: 3px;
+}
+
+.billet p {
+	font-size: 1.2em;
+	text-align: left;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+.billet a{
+	color: red;
+}
+
+/************ COMMENTAIRES **************/
+
+.commentaire {
+	text-align: left;
+}
+
+.commentaire .titre {
+	width: 99%;
+	background-color: rgb(205, 227, 242);
+}
+
+.titre2 {
+	width: 99%;
+	background-color: rgb(205, 227, 242);
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	padding: 0px 4px 4px 4px;
+	/* box-shadow: 1px 1px 1px rgb(92, 103, 175); */
+	box-shadow: 1px 1px 1px rgb(127, 148, 211);
+}
+
+textArea {
+	width: 99%;
+}
+
+/************* Presentation de l'asso / contact / services / animations *****************************/
+#contact{
+	width: 69%;
+	height : 30%
+}
+
+#contact-gauche{
+	width :40%;
+	display: inline-block;
+	vertical-align: top;
+}
+#contact-droite ul {
+	margin-right: 0%;
+	margin-left: 0%;
+	list-style-type:none; 
+	padding : 0%;
+	display: inline-block;
+	vertical-align: top;
+}
+#contact-droite {
+	width :49%;
+	display: inline-block;
+	vertical-align: top;
+}
+#contact-centre {
+	margin-left: 2% ;
+	width :8%;
+	display: inline-block;
+	vertical-align: top;
+	font-size:1em;
+}
+.titreBleu {
+	text-align: left;
+	width: 99%;
+	background-color: rgb(205, 227, 242);
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+#sp {opacity :1; width: 55px; height: 55px;}
+#sp:hover{opacity:0.8;}
+
+/******************************************* GROUPES *************************************************/
+
+.galerieImage {
+	overflow: visible;
+	display: inline-block;
+	text-align: left;
+	width: 99%;
+	vertical-align: top;
+}
+
+.cadrePetiteImage {
+	margin: auto;
+	height: 350px;
+	/*border: 1px solid red;*/
+}
+
+.petiteImage {
+	display: inline-block;
+	width: 30%;
+	border: 1px solid black;
+	text-align: center;
+	vertical-align: top;
+	height: 99%;
+}
+
+.petiteImage img {
+	width: 99%;
+	max-height: 80%;
+}
+
+/********** Video **********/
+
+
+.galerieVideo {
+	display: inline-block;
+	width: 10%;
+	text-align: left;
+	width: 99%;
+	vertical-align: top;
+}
+
+.cadrePetiteVideo {
+	margin: auto;
+	height: 200px;
+	/*border: 2px solid red;*/
+	text-align: center;
+}
+
+.petiteVideo {	
+	text-align: center;
+	vertical-align: top;
+}
+
+
+
+
+
+
+
+
+
+/******** Erreurs **********/
+
+.erreur {
+	margin-top: 50px;
+	margin-bottom: 30px;
+	color: red;
+}
+
+.erreur strong {
+	font-size: 1.2em;
+}
+
+/********************************* LIENS ********************************/
+a {
+	text-decoration: none;
+}
+nav a {
+	color: black;
+}
+#panneau_central a {
+	color: rgb(75, 88, 167);
+	font-weight: bold;
+}
+
+#menu_principal a {
+	text-decoration: underline;
+	color: blue;
+	font-size: 1.8em;
+}
+#menu_principal a:hover {
+	color: Red;
+}
+
+#menu_gauche a:hover, #menu_droit a:hover {
+	text-decoration: underline;
+}
+
+/******************************** Tableau ***********************/
+
+table {
+	border-collapse: collapse;
+	margin: 0 auto;
+	width: 99%;
+}
+td
+{
+    border: 1px solid rgb(75, 88, 167);
+}
+th {
+	text-align: center;
+}
+
+
+/***************************** POLICE *************************/
+@font-face {
+	font-family: 'MonotypeCorsiva';
+	src: url('Fonts/MTCORSIVA/MTCORSVA.ttf') format('truetype'),
+		url('Fonts/MTCORSIVA/MonotypeCorsiva.eot') format('eot'),
+		url('Fonts/MTCORSIVA/MonotypeCorsiva.svg') format('svg'),
+		url('Fonts/MTCORSIVA/MonotypeCorsiva.otf') format('otf'),
+		url('Fonts/MTCORSIVA/MonotypeCorsiva.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'CharlemagneStd-Bold';
+	src: url('Fonts/CharlemagneStd-Bold/CharlemagneStd-Bold.ttf') format('truetype'),
+		url('Fonts/CharlemagneStdBold/CharlemagneStd-Bold.eot') format('eot'),
+		url('Fonts/CharlemagneStdBold/CharlemagneStd-Bold.svg') format('svg'),
+		url('Fonts/CharlemagneStdBold/CharlemagneStd-Bold.woff') format('woff');
+}
